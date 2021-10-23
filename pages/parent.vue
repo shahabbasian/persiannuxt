@@ -1,11 +1,12 @@
 <template>
   <div>
+    <h1>Parent</h1>
     <ul class="flex">
       <li v-for="(link, index) in links" :key="index">
         <NuxtLink class="mr-2" :to="link.url">{{ link.name }}</NuxtLink>
       </li>
     </ul>
-    <NuxtPage />
+    <NuxtChild />
   </div>
 </template>
 
@@ -14,21 +15,11 @@ export default {
   data: () => { 
     return {
       links: [
-        {name: "Home", url: "/"},
-        {name: "About", url: "/about"},
-        {name: "Blog", url: "/blog"},
         {name: "Parent", url: "/parent"},
+        {name: "Child", url: "/parent/child"},
+        {name: "Test", url: "/parent/test"},
       ],
     }
   }
 }
 </script>
-
-<style>
-.flex {
-  display: flex;
-}
-.mr-2 {
-  margin-right: 2rem;
-}
-</style>
