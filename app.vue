@@ -9,19 +9,15 @@
   </div>
 </template>
 
-<script>
-export default {
-  data: () => { 
-    return {
-      links: [
-        {name: "Home", url: "/"},
-        {name: "About", url: "/about"},
-        {name: "Blog", url: "/blog"},
-        {name: "Parent", url: "/parent"},
-      ],
-    }
-  }
-}
+<script setup lang="ts">
+import {reactive} from "vue"
+
+const links: any = reactive([
+    {name: "Home", url: "/"},
+    {name: "About", url: "/about"},
+    {name: "Blog", url: "/blog"},
+    {name: "Parent", url: "/parent"},
+  ])
 </script>
 
 <style>

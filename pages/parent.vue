@@ -10,16 +10,12 @@
   </div>
 </template>
 
-<script>
-export default {
-  data: () => { 
-    return {
-      links: [
-        {name: "Parent", url: "/parent"},
-        {name: "Child", url: "/parent/child"},
-        {name: "Test", url: "/parent/test"},
-      ],
-    }
-  }
-}
+<script setup lang="ts">
+import {reactive} from "vue"
+
+const links: any = reactive([
+    {name: "Parent", url: "/parent"},
+    {name: "Child", url: "/parent/child"},
+    {name: "Test", url: "/parent/test"},
+  ])
 </script>
