@@ -9,10 +9,8 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import {reactive} from "vue"
-
-const links: any = reactive([
+<script setup>
+const links = reactive([
     {name: "Home", url: "/"},
     {name: "About", url: "/about"},
     {name: "Blog", url: "/blog"},
